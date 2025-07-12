@@ -2,12 +2,13 @@ import React from "react";
 import "./award.css";
 
 const logos = [
-  "/assets/logo1.png",
-  "/assets/logo2.png",
-  "/assets/logo3.png",
-  "/assets/logo4.png",
-  "/assets/logo5.png",
-  "/assets/logo6.png",
+  "/icon/leaf-icon.png",
+  "/icon/leaf-icon.png",
+  "/icon/leaf-icon.png",
+  "/icon/leaf-icon.png",
+  "/icon/leaf-icon.png",
+  "/icon/leaf-icon.png",
+  "/icon/leaf-icon.png",
 ];
 
 const Award = () => {
@@ -15,7 +16,7 @@ const Award = () => {
     <div className="award-section">
       <div className="award-content">
         <div className="award-icon">
-          <img src="/assets/leaf-icon.png" alt="leaf icon" />
+          <img src="/icon/leaf-icon.png" alt="leaf icon" />
         </div>
         <p className="award-title">
           <strong>25,000+</strong> Students
