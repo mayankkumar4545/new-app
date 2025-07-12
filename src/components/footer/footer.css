@@ -1,0 +1,135 @@
+.footer {
+  background: #f9f9f9;
+  padding: 50px 20px;
+  font-family: "Segoe UI", sans-serif;
+  color: #333;
+  border-top: 1px solid #ddd;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-brand {
+  flex: 1 1 300px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.logo-icon {
+  font-size: 28px;
+  margin-right: 8px;
+  color: #f24c4c;
+  animation: popIn 0.5s ease-in-out forwards;
+}
+
+.logo-text {
+  color: #111;
+}
+
+.footer-brand p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.footer-links {
+  display: flex;
+  flex: 2 1 500px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.link-group {
+  min-width: 150px;
+}
+
+.link-group h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.link-group a {
+  display: block;
+  text-decoration: none;
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 6px;
+  transition: color 0.3s ease;
+}
+
+.link-group a:hover {
+  color: #f24c4c;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.footer-socials a {
+  font-size: 18px;
+  color: #444;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-socials a:hover {
+  transform: scale(1.2);
+  color: #f24c4c;
+}
+
+/* Animations */
+@keyframes popIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+    padding: 20px 10px;
+  }
+
+  .footer-brand {
+    margin-bottom: 10px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .link-group {
+    margin-bottom: 0;
+  }
+
+  .footer-socials {
+    justify-content: center;
+    margin-top: 10px;
+  }
+}

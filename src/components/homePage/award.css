@@ -1,0 +1,76 @@
+.award-section {
+  background: #fefcf9;
+  padding: 60px 20px;
+  text-align: center;
+  overflow: hidden;
+  border-top: 1px solid #eee;
+}
+
+.award-content {
+  margin-bottom: 40px;
+}
+
+.award-icon img {
+  width: 36px;
+  margin-bottom: 10px;
+}
+
+.award-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.award-subtitle {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 6px;
+}
+
+/* Carousel styles */
+.logo-carousel {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  width: max-content;
+  animation: scrollLeft 20s linear infinite;
+  gap: 40px;
+}
+
+.carousel-logo {
+  height: 60px;
+  opacity: 0.9;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.carousel-logo:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .carousel-logo {
+    height: 50px;
+  }
+
+  .carousel-track {
+    gap: 24px;
+    animation-duration: 30s;
+  }
+}
