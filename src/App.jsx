@@ -8,12 +8,14 @@ import Language from "./components/homePage/Language";
 import Journey from "./components/homePage/Journey";
 import Community from "./components/homePage/Community";
 import Footer from "./components/footer/Footer";
+import Courses from "./components/myCourses/Courses";
 
 function App() {
   return (
     <>
       <NavBar />
       <IntroPage />
+      <Courses />
       <Award />
       <Skills />
       <Language />

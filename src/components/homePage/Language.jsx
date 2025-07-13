@@ -20,11 +20,7 @@ const Language = () => {
   return (
     <section className="language-wrapper">
       <div className="language-header">
-        <img
-          src="/assets/cloud-icon.png"
-          alt="cloud"
-          className="language-icon"
-        />
+        <img src="/icon/cloud-icon.png" alt="cloud" className="language-icon" />
         <h2 className="language-title">
           Where Questions
           <br />

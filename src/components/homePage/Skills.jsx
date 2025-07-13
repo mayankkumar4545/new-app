@@ -26,7 +26,7 @@ const Skills = () => {
             <span className="arrow">→</span>
           </div>
           <img
-            src="/assets/skills-student.png"
+            src="/assets/skills-student.webp"
             alt="Student"
             className="card-img"
           />
@@ -48,16 +48,16 @@ const Skills = () => {
             <span className="arrow">→</span>
           </div>
           <img
-            src="/assets/skills-teacher.png"
+            src="/assets/Teaching-skills.jpg"
             alt="Teacher"
             className="card-img"
           />
           <div className="meta">
             <div className="avatars">
-              <img src="/assets/av1.png" alt="av1" />
-              <img src="/assets/av2.png" alt="av2" />
-              <img src="/assets/av3.png" alt="av3" />
-              <img src="/assets/av4.png" alt="av4" />
+              <img src="/icon/leaf-icon.png" alt="av1" />
+              <img src="/icon/leaf-icon.png" alt="av2" />
+              <img src="/icon/leaf-icon.png" alt="av3" />
+              <img src="/icon/leaf-icon.png" alt="av4" />
             </div>
             <span className="duration">16:12</span>
           </div>
@@ -74,7 +74,7 @@ const Skills = () => {
             <span className="arrow">→</span>
           </div>
           <img
-            src="/assets/skills-family.png"
+            src="/assets/skills-student.webp"
             alt="Family"
             className="card-img"
           />

@@ -5,12 +5,12 @@ const Community = () => {
   return (
     <section className="community-section">
       <div className="community-decor left">
-        <img src="/assets/hat-icon.png" alt="hat" className="icon-top" />
-        <img src="/assets/cloud-icon.png" alt="cloud" className="icon-shadow" />
+        <img src="/icon/hat-icon.png" alt="hat" className="icon-top" />
+        <img src="/icon/cloud-icon.png" alt="cloud" className="icon-shadow" />
       </div>
 
       <div className="community-content">
-        <img src="/assets/cloud-icon.png" alt="cloud" className="cloud-top" />
+        <img src="/icon/cloud-icon.png" alt="cloud" className="cloud-top" />
         <h2 className="community-title">
           Join Our
           <br />
@@ -20,12 +20,8 @@ const Community = () => {
       </div>
 
       <div className="community-decor right">
-        <img src="/assets/cloud-icon.png" alt="cloud" className="icon-shadow" />
-        <img
-          src="/assets/monitor-icon.png"
-          alt="monitor"
-          className="icon-top"
-        />
+        <img src="/icon/cloud-icon.png" alt="cloud" className="icon-shadow" />
+        <img src="/icon/monitor-icon.png" alt="monitor" className="icon-top" />
       </div>
     </section>
   );

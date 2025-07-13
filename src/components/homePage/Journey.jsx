@@ -22,7 +22,7 @@ const Journey = () => {
 
         <div className="journey-right">
           <div className="journey-card large-card">
-            <img src="/assets/journey-main.jpg" alt="learning girl" />
+            <img src="/assets/skills-student.webp" alt="learning girl" />
             <div className="card-overlay">
               <h3>
                 Personalized

@@ -45,13 +45,13 @@ const Footer = () => {
 
         {/* Social Icons */}
         <div className="footer-socials">
-          <a href="#">
+          <a href="#" aria-label="Facebook">
             <FaFacebookF />
           </a>
-          <a href="#">
+          <a href="#" aria-label="Instagram">
             <FaInstagram />
           </a>
-          <a href="#">
+          <a href="#" aria-label="LinkedIn">
             <FaLinkedinIn />
           </a>
         </div>
