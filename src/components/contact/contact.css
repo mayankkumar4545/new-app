@@ -6,7 +6,7 @@
 }
 
 .contact-header {
-  background: url("./assets/solar-pic.jpg") center/cover no-repeat; /* Replace with your actual image path */
+  background: url("/assets/solar-pic.jpg") center/cover no-repeat; /* Replace with your actual image path */
   padding: 5rem 2rem;
   color: rgb(20, 19, 19);
   text-align: center;
