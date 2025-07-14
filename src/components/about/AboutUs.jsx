@@ -1,6 +1,5 @@
 import React from "react";
 import "./about.css";
-import laptopImage from "./img/teaching-skills.jpg";
 
 function AboutUs() {
   return (
@@ -11,7 +10,7 @@ function AboutUs() {
         </h1>
         <div className="image-container">
           <img
-            src={laptopImage}
+            src="/assets/Teaching-skills.jpg"
             alt="Working on laptop"
             className="about-image"
           />
