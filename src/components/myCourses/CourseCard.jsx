@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const CourseCard = ({ course }) => {
   const {
@@ -10,6 +11,7 @@ const CourseCard = ({ course }) => {
     price,
     completedChallenges,
     totalChallenges,
+    exploreLink,
   } = course;
 
   const progress = (completedChallenges / totalChallenges) * 100;
@@ -21,9 +23,9 @@ const CourseCard = ({ course }) => {
           <p className="course-label text-uppercase">Course</p>
           <h2 className="course-title">{courseTitle}</h2>
         </div>
-        <a href="#" className="view-all text-decoration-none">
+        <Link to={exploreLink} className="view-all text-decoration-none">
           View all chapters &rarr;
-        </a>
+        </Link>
       </div>
 
       <div className="course-right p-4 flex-grow-1">
@@ -57,7 +59,10 @@ const CourseCard = ({ course }) => {
           </div>
         </div>
 
-        <button className="continue-btn">Continue</button>
+        <Link to={exploreLink}>
+          {" "}
+          <button className="continue-btn">Continue</button>
+        </Link>
       </div>
     </div>
   );

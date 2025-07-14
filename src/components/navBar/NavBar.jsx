@@ -1,12 +1,23 @@
+import { Link } from "react-router-dom";
 import "./navBar.css";
 
 function NavBar() {
+  const handleNavLinkClick = () => {
+    const collapseElement = document.getElementById("navbarNav");
+    if (collapseElement.classList.contains("show")) {
+      const bsCollapse = new window.bootstrap.Collapse(collapseElement, {
+        toggle: false,
+      });
+      bsCollapse.hide();
+    }
+  };
+
   return (
     <nav className="navbar navbar-expand-lg sticky-top custom-navbar">
       <div className="container-fluid">
-        <a className="navbar-brand custom-brand" href="#">
+        <Link className="navbar-brand custom-brand" to="/">
           My App
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -24,24 +35,40 @@ function NavBar() {
         >
           <ul className="navbar-nav nav-center">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
+              <Link
+                className="nav-link"
+                to="/home"
+                onClick={handleNavLinkClick}
+              >
                 Home
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <Link
+                className="nav-link"
+                to="/courses"
+                onClick={handleNavLinkClick}
+              >
                 Courses
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <Link
+                className="nav-link"
+                to="/contactUs"
+                onClick={handleNavLinkClick}
+              >
                 Contact Us
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <Link
+                className="nav-link"
+                to="/aboutUs"
+                onClick={handleNavLinkClick}
+              >
                 About Us
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

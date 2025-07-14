@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./journey.css";
 
 const Journey = () => {
@@ -17,7 +18,10 @@ const Journey = () => {
             Discover Personalized, AI-Powered Learning That Prepares Students
             for Success in the Real World
           </p>
-          <button className="journey-btn">Start Your Journey</button>
+          <Link to="/courses">
+            {" "}
+            <button className="journey-btn">Start Your Journey</button>
+          </Link>
         </div>
 
         <div className="journey-right">

@@ -12,6 +12,7 @@ const courseData = [
     price: "49.99",
     completedChallenges: 6,
     totalChallenges: 9,
+    exploreLink: "/JavaScript",
   },
   {
     courseTitle: "React Essentials",
@@ -22,6 +23,7 @@ const courseData = [
     price: "59.99",
     completedChallenges: 4,
     totalChallenges: 7,
+    exploreLink: "/JavaScript",
   },
   {
     courseTitle: "Node.js Backend",
@@ -32,6 +34,7 @@ const courseData = [
     price: "69.99",
     completedChallenges: 2,
     totalChallenges: 6,
+    exploreLink: "/JavaScript",
   },
   {
     courseTitle: "Node.js Backend",
@@ -42,6 +45,7 @@ const courseData = [
     price: "69.99",
     completedChallenges: 2,
     totalChallenges: 6,
+    exploreLink: "/JavaScript",
   },
   {
     courseTitle: "Node.js Backend",
@@ -52,6 +56,7 @@ const courseData = [
     price: "69.99",
     completedChallenges: 2,
     totalChallenges: 6,
+    exploreLink: "/JavaScript",
   },
   {
     courseTitle: "Node.js Backend",
@@ -62,6 +67,7 @@ const courseData = [
     price: "69.99",
     completedChallenges: 2,
     totalChallenges: 6,
+    exploreLink: "/JavaScript",
   },
   {
     courseTitle: "Node.js Backend",
@@ -72,13 +78,14 @@ const courseData = [
     price: "69.99",
     completedChallenges: 2,
     totalChallenges: 6,
+    exploreLink: "/JavaScript",
   },
 ];
 
 const Courses = () => {
   return (
     <>
-      <h1 className="text-center fw-bold ">Our Courses</h1>
+      <h1 className="text-center fw-bold mt-3">Our Courses</h1>
       <div className="container py-5">
         <div className="row g-4">
           {courseData.map((course, index) => (

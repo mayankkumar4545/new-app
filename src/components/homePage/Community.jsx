@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./community.css";
 
 const Community = () => {
@@ -16,7 +17,10 @@ const Community = () => {
           <br />
           Community Banner
         </h2>
-        <button className="community-btn">Join now</button>
+        <Link to="/ourCommunity">
+          {" "}
+          <button className="community-btn">Join now</button>
+        </Link>
       </div>
 
       <div className="community-decor right">

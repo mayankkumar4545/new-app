@@ -1,0 +1,132 @@
+.about-section {
+  background-color: #0b0f11;
+  color: #a0c1a9;
+  padding: 4rem 2rem;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  overflow: hidden;
+  position: relative;
+}
+
+.about-section::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.06) 0%,
+    transparent 80%
+  );
+  animation: lightFlicker 6s infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes lightFlicker {
+  0%,
+  100% {
+    opacity: 0.6;
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(1.1) rotate(15deg);
+  }
+}
+
+.about-content {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-heading {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #a0c1a9;
+  margin-bottom: 2rem;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+.about-image {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+  filter: brightness(0.9);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-image:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.explore-circle {
+  position: absolute;
+  bottom: -2rem;
+  left: 2rem;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 1px solid #a0c1a9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6rem;
+  color: #a0c1a9;
+  animation: rotateText 12s linear infinite;
+}
+
+.explore-circle span {
+  white-space: nowrap;
+}
+
+.arrow-down {
+  position: absolute;
+  bottom: 10px;
+  font-size: 1.2rem;
+  color: #a0c1a9;
+}
+
+@keyframes rotateText {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.about-description {
+  font-size: 0.95rem;
+  color: #d0d0d0;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (max-width: 768px) {
+  .about-heading {
+    font-size: 1.5rem;
+  }
+  .explore-circle {
+    width: 120px;
+    height: 120px;
+    font-size: 0.5rem;
+    bottom: -1rem;
+    left: 1rem;
+  }
+  .arrow-down {
+    font-size: 1rem;
+  }
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./introPage.css";
 
 const IntroPage = () => {
@@ -17,7 +18,9 @@ const IntroPage = () => {
           <br />
           Designed to Build Essential Skills for Future Success
         </p>
-        <button className="get-started-btn">Get Started</button>
+        <Link to="/courses">
+          <button className="get-started-btn">Get Started</button>{" "}
+        </Link>
       </div>
 
       <div className="card-grid">
