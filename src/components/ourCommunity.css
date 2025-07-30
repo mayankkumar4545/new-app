@@ -1,0 +1,256 @@
+/* --- Root Variables for Theming --- */
+:root {
+  --primary-color: #007bff;
+  --primary-hover: #0069d9;
+  --secondary-color: #f8f9fa;
+  --text-dark: #212529;
+  --text-light: #6c757d;
+  --card-bg: #ffffff;
+  --border-color: #e9ecef;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  --border-radius: 16px;
+  --transition-speed: 0.3s;
+}
+
+/* --- Main Container --- */
+.community-container {
+  background-color: var(--secondary-color);
+  padding: 5rem 2rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+}
+
+.community-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* --- Header Section --- */
+.community-header {
+  margin-bottom: 3rem;
+}
+
+.community-title {
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.community-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* --- Stats Section --- */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-bottom: 5rem;
+}
+
+.stat-card {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  transition: transform var(--transition-speed) ease,
+    box-shadow var(--transition-speed) ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+}
+
+.stat-icon {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.stat-number {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.stat-label {
+  font-size: 1rem;
+  color: var(--text-light);
+}
+
+/* === MODIFIED STYLES FOR SCROLLING TESTIMONIALS === */
+.testimonials-section {
+  overflow: hidden; /* Hide the overflowing scroll content */
+  margin-bottom: 5rem;
+  position: relative;
+}
+
+/* Add this fade effect on the sides */
+.testimonials-section::before,
+.testimonials-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  z-index: 2;
+}
+
+.testimonials-section::before {
+  left: 0;
+  background: linear-gradient(to right, var(--secondary-color), transparent);
+}
+
+.testimonials-section::after {
+  right: 0;
+  background: linear-gradient(to left, var(--secondary-color), transparent);
+}
+
+.section-heading {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 3rem;
+}
+
+.testimonials-grid {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+  animation: scroll 40s linear infinite;
+}
+
+.testimonials-grid:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.testimonial-card {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 350px;
+  flex-shrink: 0;
+  text-align: left;
+}
+/* === END OF MODIFIED STYLES === */
+
+.testimonial-quote {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-dark);
+  margin: 0 0 1.5rem 0;
+  font-style: italic;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: auto;
+}
+
+.author-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.author-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.author-name {
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.author-role {
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+/* --- Call to Action Section --- */
+.community-cta {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--primary-hover)
+  );
+  padding: 3rem 2rem;
+  border-radius: var(--border-radius);
+  color: white;
+}
+
+.cta-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.cta-text {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.cta-button {
+  background: white;
+  color: var(--primary-color);
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all var(--transition-speed) ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Responsive Media Queries --- */
+@media (max-width: 992px) {
+  .community-title {
+    font-size: 2.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .community-container {
+    padding: 3rem 1rem;
+  }
+  .community-title {
+    font-size: 2rem;
+  }
+  .community-subtitle {
+    font-size: 1rem;
+  }
+  /* The scrolling testimonial section does not need responsive changes */
+}

@@ -24,14 +24,12 @@ const CourseCard = ({ course }) => {
           <h2 className="course-title">{courseTitle}</h2>
         </div>
         <Link to={exploreLink} className="view-all text-decoration-none">
-          View all chapters &rarr;
+          View all Details &rarr;
         </Link>
       </div>
 
       <div className="course-right p-4 flex-grow-1">
-        <p className="chapter-label text-uppercase mb-1">
-          Chapter {chapterNumber}
-        </p>
+        <p className="chapter-label text-uppercase mb-1">Technical Course</p>
         <h2 className="chapter-title mb-3">{chapterTitle}</h2>
 
         <div className="progress-bar mb-2">
@@ -40,9 +38,9 @@ const CourseCard = ({ course }) => {
             style={{ width: `${progress}%` }}
           ></div>
         </div>
-        <p className="progress-text text-end mb-4">
+        {/*<p className="progress-text text-end mb-4">
           {completedChallenges}/{totalChallenges} Challenges
-        </p>
+        </p>*/}
 
         <div className="row mb-3">
           <div className="col-12 col-sm-4 mb-2">
@@ -55,7 +53,7 @@ const CourseCard = ({ course }) => {
           </div>
           <div className="col-12 col-sm-4 mb-2">
             <small className="text-muted">Price</small>
-            <div className="fw-semibold">${price}</div>
+            <div className="fw-semibold">₹{price}</div>
           </div>
         </div>
 

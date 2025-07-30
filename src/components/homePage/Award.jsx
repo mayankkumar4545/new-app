@@ -19,7 +19,7 @@ const Award = () => {
           <img src="/icon/leaf-icon.png" alt="leaf icon" />
         </div>
         <p className="award-title">
-          <strong>25,000+</strong> Students
+          <strong>4000+</strong> Students
         </p>
         <p className="award-subtitle">Empowered Since Launch</p>
       </div>

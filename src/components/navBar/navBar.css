@@ -1,66 +1,126 @@
-/* navBar.css */
+/* --- Root Variables for Theming --- */
+:root {
+  --primary-color: #007bff;
+  --primary-hover: #0069d9;
+  --nav-bg: rgba(248, 249, 250, 0.8); /* Light, semi-transparent background */
+  --text-dark: #343a40;
+  --text-light: #6c757d;
+  --border-color: rgba(0, 0, 0, 0.08);
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  --border-radius: 12px;
+  --transition-speed: 0.3s;
+}
 
+/* --- Main Navbar Styling --- */
 .custom-navbar {
-  background-color: #ffffff;
-  padding: 0.8rem 1.5rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-  transition: background-color 0.3s ease;
-  z-index: 1000;
+  background: var(--nav-bg);
+  padding: 0.75rem 2rem;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-color);
+  transition: background-color var(--transition-speed) ease;
 }
 
-.custom-navbar:hover {
-  background-color: #f8f9fa;
-}
-
+/* --- Brand/Logo Styling --- */
 .custom-brand {
-  font-weight: 700;
-  font-size: 1.5rem;
-  color: #2a2a2a;
-  transition: color 0.3s ease;
-}
-
-.custom-brand:hover {
-  color: #0d6efd;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--text-dark);
   text-decoration: none;
 }
 
+.custom-brand:hover {
+  color: var(--text-dark);
+}
+
+/* --- Navigation Links Styling --- */
+.navbar-nav .nav-item {
+  margin: 0 0.25rem;
+}
+
 .navbar-nav .nav-link {
-  color: #444;
+  color: var(--text-light);
   font-weight: 500;
-  margin-left: 1rem;
-  transition: all 0.3s ease;
+  padding: 0.6rem 1rem;
+  border-radius: 99px; /* Pill shape */
+  position: relative;
+  z-index: 1;
+  transition: all var(--transition-speed) ease;
 }
 
+/* --- MODIFIED: Combined active and hover styles for nav links --- */
+.navbar-nav .nav-link.active,
 .navbar-nav .nav-link:hover {
-  color: #0d6efd;
-  transform: scale(1.05);
+  border-color: var(--primary-hover);
+  color: #130505;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
 }
 
-.navbar-nav .nav-link.active {
-  color: #0d6efd;
-  font-weight: 600;
+/* --- Action Buttons (Login/Signup) --- */
+.navbar-nav .btn {
+  padding: 0.6rem 1.5rem;
+  font-weight: 500;
+  border-radius: var(--border-radius);
+  transition: all var(--transition-speed) ease;
+  border: 1px solid transparent;
 }
 
+.login-btn {
+  background-color: transparent;
+  color: var(--text-dark);
+  border-color: var(--border-color);
+  margin-right: 0.5rem;
+}
+
+.signup-btn {
+  background-color: var(--primary-color);
+  color: #fff;
+  border-color: var(--primary-color);
+}
+
+/* --- MODIFIED: Combined hover styles for all buttons --- */
+.login-btn:hover,
+.signup-btn:hover {
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
+}
+
+/* --- Mobile Toggler Styling --- */
 .navbar-toggler {
   border: none;
+  padding: 0.5rem;
 }
 
 .navbar-toggler:focus {
-  box-shadow: none;
-}
-/* navBar.css */
-
-.nav-center {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  gap: 2rem;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
 }
 
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(52, 58, 64, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* --- Responsive Adjustments for Mobile Menu --- */
 @media (max-width: 991.98px) {
-  .nav-center {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
+  .custom-navbar {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .navbar-collapse {
+    padding: 1.5rem;
+    margin-top: 0.5rem;
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  .navbar-nav .nav-item {
+    margin: 0.2rem 0;
   }
 }

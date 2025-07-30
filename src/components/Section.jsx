@@ -5,8 +5,9 @@ import Courses from "./myCourses/Courses";
 import ScrollToTop from "./SrollTop";
 import AboutUs from "./about/AboutUs";
 import ContactUs from "./contact/ContactUs";
-import FinalJavaExplore from "./explore/javaScriptExplore.jsx/FinalJavaExplore";
-import JavaScriptBuyPage from "./buy/javaScriptBuy/JavaScriptBuyPage";
+import AcfBuyPage from "./buy/acfBuy/AcfBuyPage";
+import FinalACFExploreCourse from "./explore/acfExplore/FinalACFExploreCourse";
+import OurCommunity from "./OurCommunity";
 const Section = () => {
   return (
     <BrowserRouter>
@@ -18,8 +19,14 @@ const Section = () => {
         <Route path="/courses" element={<Courses />} />
         <Route path="/aboutUs" element={<AboutUs />} />
         <Route path="/contactUs" element={<ContactUs />} />
-        <Route path="/JavaScript" element={<FinalJavaExplore />} />
-        <Route path="/buyJavaScript" element={<JavaScriptBuyPage />} />
+        <Route path="/ourCommunity" element={<OurCommunity />} />
+
+        <Route
+          path="/ComputerFundamentals"
+          element={<FinalACFExploreCourse />}
+        />
+
+        <Route path="/buyComputerFundamentals" element={<AcfBuyPage />} />
       </Routes>
     </BrowserRouter>
   );

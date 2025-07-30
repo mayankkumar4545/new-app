@@ -1,12 +1,51 @@
+/* --- Animation Keyframes Definition --- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .course-card {
   background: white;
   border-radius: 15px;
   overflow: hidden;
   font-family: "Segoe UI", sans-serif;
-  transition: all 0.3s ease;
+  /* This transition is key for the smooth hover effect */
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   flex-direction: column;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+
+  /* Initial state for entrance animation */
+  opacity: 0;
+  animation: fadeInUp 0.5s ease-out forwards;
 }
 
+/* --- THIS IS THE CORRECTED HOVER EFFECT --- */
+.course-card:hover {
+  transform: translateY(-8px) scale(1.03); /* Lifts and zooms the card */
+  box-shadow: 0 12px 25px rgba(46, 33, 85, 0.15);
+}
+
+/* Staggered delay for each card */
+.row .col-12:nth-child(1) .course-card {
+  animation-delay: 0.1s;
+}
+.row .col-12:nth-child(2) .course-card {
+  animation-delay: 0.2s;
+}
+.row .col-12:nth-child(3) .course-card {
+  animation-delay: 0.3s;
+}
+.row .col-12:nth-child(4) .course-card {
+  animation-delay: 0.4s;
+}
+
+/* --- Other existing styles --- */
 .course-left {
   background-color: #2e2155;
   border-radius: 15px 15px 0 0;
