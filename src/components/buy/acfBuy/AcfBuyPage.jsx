@@ -24,7 +24,7 @@ const AcfBuyPage = () => {
             Build Your Tech Foundation. Unlock Your Future.
           </h3>
           <h1 className="product-main-title">
-            Applied Computer Fundamentals with Industry Pathways
+            Applied Computer Fundamentals with Carrier Perspective
           </h1>
           <p className="product-description">
             This is your first step into the world of technology. This course
@@ -48,7 +48,7 @@ const AcfBuyPage = () => {
           </div>
 
           <div className="price-tag">
-            <span className="current-price">₹549</span>
+            <span className="current-price">₹399</span>
             <span className="original-price">₹950</span>
           </div>
 
@@ -78,8 +78,8 @@ const AcfBuyPage = () => {
             <div className="qr-info">
               <h4>Scan & Pay</h4>
               <p>
-                Scan the above QR code and fill the registration form to confirm
-                your seat.
+                Scan the above QR code, pay the course fee and then fill the
+                Registration form by clicking on "Register Now" button.
               </p>
             </div>
           </div>

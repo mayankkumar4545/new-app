@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./computerFundamentalsExploreCourseDetails.css";
-import { FaClock, FaChevronDown } from "react-icons/fa";
+import { FaClock, FaChevronDown, FaStar } from "react-icons/fa";
 
 // Component to render the curriculum using an accordion
 const CurriculumAccordion = ({ syllabus }) => {
@@ -48,58 +48,71 @@ const ACFExploreCourseDetails = () => {
   // Syllabus data provided
   const syllabusContent = [
     {
-      title: "Module 1: Introduction to Computer Systems and Languages",
+      title: "Module 1: Introduction to Computer System",
       topics: [
-        "What is computer?",
-        "Block diagram of computer",
-        "Computer components vs peripherals",
-        "Memory and its types",
-        "Secondary storage",
-        "BIOS",
-        "PC connection interfaces",
-        "Types of computer languages and their translators",
+        "What is Computer?",
+        "Block Diagram of Computer",
+        "Computer Components and Peripherals",
+        "Computer Memory and its Types",
+        "Secondary Storage",
+        "BIOS and BOOTING Process",
+        "PC Connection Interfaces",
+        "Computer Languages and Translators",
       ],
     },
     {
       title: "Module 2: Operating System",
       topics: [
-        "What is operating system and its functions",
-        "Types of operating systems",
-        "Windows VS Linux",
-        "How to install Windows & Linux?",
-        "Directory structure of Windows & Linux",
-        "Linux kernel and basic Linux commands",
+        "Operating System and its Functions",
+        "Types of Operating System",
+        "Kernel and its Types",
+        "File System and its Types",
+        "Windows vs Linux",
+        "Linux Kernel and Basic Linux Commands",
       ],
     },
     {
       title: "Module 3: Basics of Computer Networks and Security",
       topics: [
-        "Computer network and its types",
-        "Network topologies and the OSI model",
-        "Communication devices and Client-server model",
-        "IP vs MAC address",
-        "Security threats and consequences",
-        "Secure passwords & multifactor authentication",
-        "Authentication VS Authorization",
+        "Definition of Computer Network",
+        "Types of Computer Networks",
+        "OSI Model and Network Topologies",
+        "Network Communication Devices",
+        "IP vs MAC Address",
+        "Network Security Threats and their Consequences",
+        "Secure Passwords and Multi Factor Authentication",
+        "Authentication vs Authorization",
       ],
     },
     {
-      title: "Module 4: Industry Tracks for Career",
+      title: "Module 4: Introduction to Databases",
       topics: [
-        "Introduction to industry tracks like:",
-        "Data Science & Cyber Security",
-        "Full Stack Web Development & Machine Learning",
-        "Cloud Computing & Software Testing",
-        "Internet of Things (IoT)",
-        "Required skillsets for each track",
+        "Data vs Database vs Database Management System",
+        "Applications of DBMS",
+        "Types of DBMS",
+        "Database Languages: DDL, DML, DCL, TCL",
       ],
     },
     {
-      title: "Module 5: Important for Skill and Online Appearance",
+      title: "Module 5: Basics of Artificial Intelligence",
       topics: [
-        "MOOCs/Hackathons along with their types and benefits",
-        "Technical profile creation on GitHub",
-        "Profile building on Stack Overflow, HackerRank, etc.",
+        "What is AI?",
+        "Applications of AI",
+        "Types of AI",
+        "Popular Tools of AI",
+        "AI vs GenAI",
+      ],
+    },
+    {
+      title: "Module 6: Future Perspectives in Technology",
+      topics: [
+        "Software Development",
+        "Machine Learning",
+        "Data Science",
+        "Cloud Computing",
+        "Cyber Security",
+        "Internet of Things",
+        "Full Stack Web Development",
       ],
     },
   ];
@@ -108,16 +121,19 @@ const ACFExploreCourseDetails = () => {
     <div className="course-details-container">
       <div className="course-content">
         <div className="left-panel">
-          <img
-            src="./assets/computer-fundamental-img.png"
-            alt="Applied Computer Fundamentals"
-            className="course-image"
-          />
+          <iframe
+            className="course-image" // The CSS will now control the size and shape
+            src="https://www.youtube.com/embed/PThg5YuQf9U?si=jFmA_KXI7m9w7adZ"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          ></iframe>
           <h2 className="course-title">
-            Applied Computer Fundamentals with Industry Pathways
+            Applied Computer Fundamentals with Career Perspective
           </h2>
           <div className="course-tags">
-            <span className="price">₹549</span>
+            <span className="price">₹399</span>
             <span className="old-price">₹950</span>
             <span className="expert-tag">Expert</span>
             <span className="duration">
@@ -133,11 +149,10 @@ const ACFExploreCourseDetails = () => {
                   This comprehensive course covers all the essentials of Applied
                   Computer Fundamentals. You'll build a solid foundation in core
                   concepts including computer hardware, software, operating
-                  systems, and networking. This course includes modules on data
-                  structures, algorithms, and cybersecurity principles, with
-                  hands-on projects. It is designed for anyone wanting to
-                  understand the building blocks of computer science and prepare
-                  for various industry pathways.
+                  systems, and networking. This course includes modules on
+                  database and cybersecurity principles. It is designed for
+                  anyone wanting to understand the building blocks of computer
+                  science and prepare for various industrial trends.
                 </>
               ) : (
                 <>
@@ -156,18 +171,17 @@ const ACFExploreCourseDetails = () => {
         </div>
 
         <div className="right-panel">
-          {/* === UPDATED EXAM DETAILS CARD === */}
           <div className="card-item">
             <h4>Exam Details</h4>
-            <h3 className="exam-card-title">Proctored Exam</h3>
+            <h3 className="exam-card-title">Online Proctored Exam</h3>
             <div className="exam-card-details">
               <p>
                 <strong>Enrollment Starts:</strong>
-                30th July, 2025
+                10th June, 2025
               </p>
               <p>
                 <strong>Exam Dates:</strong>
-                9th, 16th, 23rd, 30th Aug & 6th Sep, 2025
+                30th Aug, 2025
               </p>
             </div>
             <Link to="/buyComputerFundamentals">
@@ -220,40 +234,6 @@ const ACFExploreCourseDetails = () => {
                 <p className="review-text">
                   "I never thought learning about systems and Linux could be so
                   interesting! The support was great."
-                </p>
-              </div>
-            </div>
-            <div className="review">
-              <img
-                src="/students/user3.jpg"
-                alt="Mayank Roy"
-                className="user-avatar"
-              />
-              <div>
-                <p className="user-name">Mayank Roy</p>
-                <p className="user-title">Aspiring Developer</p>
-                <p className="review-text">
-                  "This course gave me hands-on experience with operating
-                  systems and network basics. The blend of theory and practical
-                  topics really helped me understand how everything works
-                  together in the IT world."
-                </p>
-              </div>
-            </div>
-            <div className="review">
-              <img
-                src="/students/user4.jpg"
-                alt="Riya Verma"
-                className="user-avatar"
-              />
-              <div>
-                <p className="user-name">Riya Verma</p>
-                <p className="user-title">Aspiring Developer</p>
-                <p className="review-text">
-                  "A great foundation course! From learning about BIOS and
-                  memory types to exploring industry career paths, every topic
-                  was clearly explained. It’s perfect for anyone starting in
-                  tech."
                 </p>
               </div>
             </div>

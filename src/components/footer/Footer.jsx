@@ -37,7 +37,11 @@ const Footer = () => {
         {/* Column 1: Brand and Contact Info */}
         <div className="footer-section footer-brand">
           <div className="footer-logo">
-            <Logo />
+            <img
+              src="/icon/edutech-logo.png"
+              alt="EduTech Hub Logo"
+              className="navbar-logo"
+            />
             <span className="logo-text">EduTech Hub</span>
           </div>
           <p className="footer-description">
@@ -103,7 +107,7 @@ const Footer = () => {
 
       {/* Bottom Bar */}
       <div className="footer-bottom">
-        <p>&copy; 2025 Education Hub. All rights reserved.</p>
+        <p>&copy; 2023 Education Hub. All rights reserved.</p>
         <div className="footer-bottom-links">
           <a href="#">Privacy Policy</a>
           <a href="#">Terms of Service</a>

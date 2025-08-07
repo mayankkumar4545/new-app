@@ -1,19 +1,6 @@
-/* --- Root Variables for Theming --- */
-:root {
-  --primary-color: #007bff;
-  --primary-hover: #0069d9;
-  --nav-bg: rgba(248, 249, 250, 0.8); /* Light, semi-transparent background */
-  --text-dark: #343a40;
-  --text-light: #6c757d;
-  --border-color: rgba(0, 0, 0, 0.08);
-  --shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-  --border-radius: 12px;
-  --transition-speed: 0.3s;
-}
-
 /* --- Main Navbar Styling --- */
 .custom-navbar {
-  background: var(--nav-bg);
+  background: whitesmoke;
   padding: 0.75rem 2rem;
   box-shadow: var(--shadow);
   backdrop-filter: blur(10px);
@@ -37,6 +24,12 @@
   color: var(--text-dark);
 }
 
+/* === NEW: Styling for the logo image === */
+.navbar-logo {
+  height: 40px; /* Adjust the height of your logo as needed */
+  width: auto;
+}
+
 /* --- Navigation Links Styling --- */
 .navbar-nav .nav-item {
   margin: 0 0.25rem;
@@ -52,7 +45,6 @@
   transition: all var(--transition-speed) ease;
 }
 
-/* --- MODIFIED: Combined active and hover styles for nav links --- */
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link:hover {
   border-color: var(--primary-hover);
@@ -61,36 +53,21 @@
   box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
 }
 
-/* --- Action Buttons (Login/Signup) --- */
-.navbar-nav .btn {
-  padding: 0.6rem 1.5rem;
-  font-weight: 500;
-  border-radius: var(--border-radius);
-  transition: all var(--transition-speed) ease;
-  border: 1px solid transparent;
-}
-
-.login-btn {
-  background-color: transparent;
+/* --- Custom styling for the Login button --- */
+.custom-login-btn {
   color: var(--text-dark);
-  border-color: var(--border-color);
-  margin-right: 0.5rem;
+  border: 1px solid var(--primary-color);
+  padding: 0.5rem 1.2rem;
+  border-radius: 50px; /* More rounded pill shape */
+  font-weight: 600;
+  transition: background-color var(--transition-speed) ease,
+    transform var(--transition-speed) ease,
+    box-shadow var(--transition-speed) ease;
 }
 
-.signup-btn {
-  background-color: var(--primary-color);
-  color: #fff;
-  border-color: var(--primary-color);
-}
-
-/* --- MODIFIED: Combined hover styles for all buttons --- */
-.login-btn:hover,
-.signup-btn:hover {
-  background-color: var(--primary-hover);
-  border-color: var(--primary-hover);
-  color: #fff;
+.custom-login-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
+  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.3);
 }
 
 /* --- Mobile Toggler Styling --- */
@@ -122,5 +99,10 @@
   }
   .navbar-nav .nav-item {
     margin: 0.2rem 0;
+  }
+  /* Ensure the login button is also styled correctly in mobile view */
+  .navbar-nav.ms-auto {
+    margin-top: 1rem; /* Add some space above the login button in mobile */
+    margin-left: 0 !important; /* Remove ms-auto effect in mobile */
   }
 }

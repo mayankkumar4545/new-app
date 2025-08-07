@@ -1,0 +1,114 @@
+/* Import Poppins font for this component only */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700;800;900&display=swap");
+
+/* Scoped background for the login page only */
+.login-page-background {
+  background: url("https://i.pinimg.com/originals/d7/b9/0c/d7b90cc80898e8823455a127945719af.jpg")
+    no-repeat center center;
+  background-size: cover;
+  /* Ensure the font is applied to this component's content */
+  font-family: "Poppins", sans-serif;
+}
+
+/* Styles for the transparent wrapper card */
+.wrapper {
+  width: 100%;
+  max-width: 420px; /* Limit width on larger screens */
+  backdrop-filter: blur(15px);
+  /* Ensure padding and border-radius are consistent */
+  padding: 20px 30px; /* Adjust padding as needed */
+  border-radius: 16px; /* Match Bootstrap's rounded-4 */
+}
+
+/* Custom styles for input fields within the wrapper */
+.wrapper .form-control {
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 40px; /* Pill shape */
+  font-size: 16px;
+  color: #fff; /* White text for input */
+  /* Increased right padding to prevent icon overlap */
+  padding: 20px 60px 20px 20px; /* Adjusted to 60px for consistent spacing */
+}
+
+.wrapper .form-control::placeholder {
+  color: #fff; /* White placeholder text */
+  opacity: 0.7; /* Make placeholder slightly transparent */
+}
+
+.wrapper .form-control:focus {
+  background: transparent; /* Keep background transparent on focus */
+  border-color: rgba(255, 255, 255, 0.5); /* Lighter border on focus */
+  box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.25); /* Subtle white shadow on focus */
+  color: #fff; /* Ensure text remains white on focus */
+}
+
+/* New class for consistent icon positioning */
+.input-with-icon .input-icon {
+  position: absolute;
+  right: 20px; /* Distance from the right edge of the input box */
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px; /* Ensure icon size is consistent */
+  pointer-events: none; /* Allows clicks to pass through to the input */
+}
+
+/* Specific adjustment for the eye icon to allow click */
+.input-with-icon .input-icon.cursor-pointer {
+  pointer-events: auto; /* Re-enable pointer events for the eye icon */
+}
+
+/* Adjust icon color */
+.wrapper .text-white-50 {
+  color: rgba(255, 255, 255, 0.7) !important; /* Ensure icons are visible */
+}
+
+/* Style for the "Remember me" checkbox label */
+.wrapper .form-check-label {
+  color: #fff;
+}
+
+/* General button styling for the custom btn */
+.wrapper .btn-light {
+  background: #fff;
+  color: #333;
+  border: none;
+  border-radius: 40px; /* Pill shape */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.wrapper .btn-light:hover {
+  background-color: #e2e6ea; /* Slightly darker white on hover */
+  transform: translateY(-2px); /* Lift effect on hover */
+}
+
+/* Styles for the toggle buttons (Login/Register links) */
+.wrapper .btn-link {
+  color: #fff;
+  text-decoration: underline;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.wrapper .btn-link:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .wrapper {
+    padding: 15px 20px; /* Smaller padding on small screens */
+  }
+  .wrapper h1 {
+    font-size: 26px;
+  }
+  .wrapper .form-control {
+    font-size: 14px;
+    padding: 15px 50px 15px 15px; /* Adjusted padding for smaller screens */
+  }
+  .input-with-icon .input-icon {
+    right: 15px; /* Adjust icon position for smaller screens */
+  }
+}

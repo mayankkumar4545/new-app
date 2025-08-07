@@ -14,7 +14,6 @@
 
 /* --- Main Container --- */
 .community-container {
-  background-color: var(--secondary-color);
   padding: 5rem 2rem;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, sans-serif;

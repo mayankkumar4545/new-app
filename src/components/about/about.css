@@ -2,7 +2,7 @@
 :root {
   --bg-dark: #0b0f11;
   --text-primary: #e0e0e0;
-  --text-secondary: #a0c1a9; /* Soft green */
+
   --accent-color: #00aaff; /* Bright blue accent */
   --card-bg: rgba(255, 255, 255, 0.03);
   --border-color: rgba(255, 255, 255, 0.1);

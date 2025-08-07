@@ -42,11 +42,13 @@ h3 {
   gap: 24px;
 }
 
+/* === UPDATED: Responsive Square Video === */
 .course-image {
-  width: 100%;
+  width: 100%; /* Make the video fill its container */
+  aspect-ratio: 1 / 1; /* Force a 1:1 (square) aspect ratio */
   border-radius: var(--border-radius);
-  object-fit: cover;
   box-shadow: var(--shadow);
+  border: none; /* Remove default iframe border */
 }
 
 .course-title {
@@ -211,7 +213,6 @@ h3 {
   transform: translateY(-2px);
 }
 
-/* === NEW STYLES FOR EXAM DETAILS CARD === */
 .exam-card-title {
   font-size: 1.75rem;
   font-weight: 700;
@@ -240,7 +241,6 @@ h3 {
   display: block;
   margin-bottom: 2px;
 }
-/* === END NEW STYLES === */
 
 .stats-item {
   display: flex;
